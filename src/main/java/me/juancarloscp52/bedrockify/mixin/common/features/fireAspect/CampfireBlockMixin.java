@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.CampfireBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.EnchantedBookItem;
@@ -22,6 +23,7 @@ import net.minecraft.world.event.GameEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(CampfireBlock.class)
@@ -46,4 +48,12 @@ public class CampfireBlockMixin {
         }
     }
 
+    // TODO: Consider making separate mixin
+    @Inject(method = "onEntityCollision", at=@At("HEAD"))
+    private void watchForBurningEntity(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci) {
+        if(!Bedrockify.getInstance().settings.fireAspectLight)
+            return;
+        if(entity.isOnFire() && !state.get(Properties.LIT))
+            world.setBlockState(pos, state.with(Properties.LIT, true), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
+    }
 }
