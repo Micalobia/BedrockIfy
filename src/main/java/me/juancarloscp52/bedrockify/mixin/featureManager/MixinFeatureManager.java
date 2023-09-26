@@ -44,7 +44,7 @@ public class MixinFeatureManager {
         features.put("common.features.fernBonemeal", true);
         features.put("client.features.hudOpacity", true);
         features.put("client.features.editionBranding", true);
-
+        features.put("common.features.dyeableShulker", true);
     }
 
     public static boolean isFeatureEnabled(String mixin){

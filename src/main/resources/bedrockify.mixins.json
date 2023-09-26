@@ -60,6 +60,7 @@
     "common.features.animalEatingParticles.WolfEntityMixin",
     "common.features.cauldron.ArmorDyeRecipeMixin",
     "common.features.cauldron.CauldronBehaviorMixin",
+    "common.features.dyeableShulker.ShulkerEntityMixin",
     "common.features.fernBonemeal.GrassBlockMixin",
     "common.features.fertilizableBlocks.FlowerBlockMixin",
     "common.features.fertilizableBlocks.SugarCaneBlockMixin",
