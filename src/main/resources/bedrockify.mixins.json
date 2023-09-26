@@ -51,7 +51,8 @@
     "client.features.useAnimations.ClientPlayerEntityMixin",
     "client.features.useAnimations.ClientPlayerInteractionManagerMixin",
     "client.features.useAnimations.ClientPlayNetworkHandlerMixin",
-    "client.features.worldColorNoise.BiomeColorsMixin"
+    "client.features.worldColorNoise.BiomeColorsMixin",
+    "client.features.salmonSizes.SalmonEntityRendererMixin"
   ],
   "mixins": [
     "common.features.animalEatingParticles.AnimalEntityMixin",
@@ -72,6 +73,7 @@
     "common.features.recipes.FireworkStarRecipeMixin",
     "common.features.recipes.RecipeManagerMixin",
     "common.features.recipes.ShulkerBoxColoringRecipeMixin",
+    "common.features.salmonSizes.SalmonEntityMixin",
     "common.features.worldGeneration.TreeConfiguredFeaturesInvoker"
   ],
   "injectors": {
