@@ -54,6 +54,7 @@
     "client.features.worldColorNoise.BiomeColorsMixin"
   ],
   "mixins": [
+    "common.features.repeatingCommandBlockMinecart.CommandBlockMinecartEntityMixin",
     "common.features.animalEatingParticles.AnimalEntityMixin",
     "common.features.animalEatingParticles.AxolotlEntityMixin",
     "common.features.animalEatingParticles.HorseEntityMixin",

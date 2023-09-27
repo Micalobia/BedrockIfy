@@ -44,7 +44,7 @@ public class MixinFeatureManager {
         features.put("common.features.fernBonemeal", true);
         features.put("client.features.hudOpacity", true);
         features.put("client.features.editionBranding", true);
-
+        features.put("common.features.repeatingCommandBlockMinecart", true);
     }
 
     public static boolean isFeatureEnabled(String mixin){
@@ -98,6 +98,6 @@ public class MixinFeatureManager {
             LogManager.getLogger().warn("Could not save bedrockIfy Mixin settings: " + e.getLocalizedMessage());
         }
     }
-    
+
 
 }
