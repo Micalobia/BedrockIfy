@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import me.juancarloscp52.bedrockify.common.block.cauldron.BedrockCauldronBehavior;
 import me.juancarloscp52.bedrockify.common.features.cauldron.BedrockCauldronBlocks;
 import me.juancarloscp52.bedrockify.common.features.worldGeneration.DyingTrees;
+import me.juancarloscp52.bedrockify.common.item.StackableCakes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.util.Identifier;
@@ -33,6 +34,7 @@ public class Bedrockify implements ModInitializer {
         instance = this;
         DyingTrees.registerTrees();
         BedrockCauldronBlocks.register();
+        StackableCakes.register();
         ServerLifecycleEvents.SERVER_STARTED.register(server -> BedrockCauldronBehavior.registerBehavior());
     }
 
